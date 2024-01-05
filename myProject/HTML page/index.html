@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
   <meta charset="UTF-8">
@@ -7,7 +8,7 @@
 <body>
   <header>
     <div>
-    <img src="rocket.png" alt="логотип" width="90" height="50" style="float: left;">
+    <img src="{% static 'rocket.png' %}" alt="логотип" width="90" height="50" style="float: left;">
     <h1 style="position: relative; ">Профессия Android-разработчик</h1>
     </div>
   </header>
@@ -22,7 +23,7 @@
   </nav>
   <main>
     <h1>Чем занимается Android-разработчик</h1>
-    <img src="Android3-1.jpg" width="35%" align="right">
+    <img src="{% static 'Android3-1.jpg' %}" width="35%" align="right">
     <p>Создаёт приложения и поддерживает их работу. В частности:</p>
     <ul>
       <li>разрабатывает интерфейс, логику и внутреннюю структуру приложений;</li>
@@ -57,7 +58,7 @@
       <li>английский на уровне, достаточном для чтения учебных материалов (в частности документации).</li>
     </ul>
     <center>
-      <img src="ANDROID.png" width="40%" align="center">
+      <img src="{% static 'ANDROID.png' %}" width="40%" align="center">
     </center>
   </main>
   <footer>
