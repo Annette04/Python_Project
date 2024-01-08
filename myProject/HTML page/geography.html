@@ -22,7 +22,23 @@
     </ul>
   </nav>
   <main style="margin-left:250px; font-size:20px;">
-    <!– Содержимое страницы –>
+    {% for mod in VisualDateGeography %}
+      <h2 style="text-align: center;">{{ mod.title }}</h2>
+      <div style="padding-bottom: 150px; text-align:center;">
+      <table border="1" style="float: left;">
+        <tbody>
+          {% for row in mod.get_array %}
+            <tr>
+              {% for item in row %}
+                <th>{{item}}</th>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <img src="{{ mod.image.url }}" style="position: relative;"/>
+      </div>
+    {% endfor %}
   </main>
   <footer style="margin-left: 250px;">
     <div style="font-size: 20px;">Студент: Ребак Анна Дмитриевна</div>

@@ -1,21 +1,25 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 import pandas as pd
-from .models import VisualDate
+from .models import *
 # Create your views here.
 
 def index_page(request):
     return render(request, 'index.html')
 
 def importance_page(request):
-    model1 = VisualDate.objects.all()
+    model1 = VisualDateImportance.objects.all()
     context = {
-        'VisualDate': model1,
+        'VisualDateImportance': model1,
     }
     return render(request, 'importance.html', context)
 
 def geography_page(request):
-    return render(request, 'geography.html')
+    model1 = VisualDateGeography.objects.all()
+    context = {
+        'VisualDateGeography': model1,
+    }
+    return render(request, 'geography.html', context)
 
 def skills_page(request):
     return render(request, 'skills.html')
