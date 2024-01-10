@@ -5,3 +5,4 @@ from myApp1.models import *
 admin.site.register(VisualDateImportance)
 admin.site.register(VisualDateGeography)
 admin.site.register(VisualDateSkills)
+admin.site.register(AnimatedSkills)

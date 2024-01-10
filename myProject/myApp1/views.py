@@ -23,8 +23,10 @@ def geography_page(request):
 
 def skills_page(request):
     model1 = VisualDateSkills.objects.all()
+    model2 = AnimatedSkills.objects.all()
     context = {
         'VisualDateSkills': model1,
+        'AnimatedSkills': model2
     }
     return render(request, 'skills.html', context)
 

@@ -59,3 +59,10 @@ class VisualDateSkills(models.Model):
             l = [column1[i], column2[i]]
             res.append(l)
         return res
+
+class AnimatedSkills(models.Model):
+    title = models.TextField(max_length=50)
+    image = models.ImageField()
+
+    def __str__(self):
+        return self.title
