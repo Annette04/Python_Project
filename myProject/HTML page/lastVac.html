@@ -22,7 +22,19 @@
     </ul>
   </nav>
   <main style="margin-left:250px; font-size:20px;">
-    <!– Содержимое страницы –>
+      <div style="padding-bottom: 150px; text-align:center;">
+      <table border="1" style="float: left;">
+        <tbody>
+          {% for row in GetHHVacancies %}
+            <tr>
+              {% for item in row %}
+              <th>{{item}}</th>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      </div>
   </main>
   <footer style="margin-left: 250px;">
     <div style="font-size: 20px;">Студент: Ребак Анна Дмитриевна</div>

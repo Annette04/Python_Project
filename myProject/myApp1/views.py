@@ -31,5 +31,43 @@ def skills_page(request):
     return render(request, 'skills.html', context)
 
 def lastVac_page(request):
-    return render(request, 'lastVac.html')
+    def getPage(page, params):
+        req = requests.get('https://api.hh.ru/vacancies', params)
+        data = req.content.decode()
+        req.close()
+        return data
+    def get_array(df):
+        headers = list(df.to_dict().keys())
+        column1 = df[headers[0]]
+        column2 = df[headers[1]]
+        res = [headers]
+        for i in range(len(column1)):
+            l = [column1[i], column2[i]]
+            res.append(l)
+        return res
+
+    for page in range(0, 1):
+        params = {
+            'text': 'NAME:Android',
+            'per_page': 100
+        }
+        params1 = {
+            'text': 'NAME:Андроид',
+            'per_page': 100
+        }
+        jsObj = json.loads(getPage(page, params))
+        jsObj1 = json.loads(getPage(page, params1))
+        df = pd.DataFrame(jsObj['items'])
+        df1 = pd.DataFrame(jsObj1['items'])
+        res = pd.concat([df, df1], join='outer', ignore_index=True).sort_values(by='published_at', ascending=False)
+        date = (datetime.datetime.now() - datetime.timedelta(1)).strftime('%Y-%m-%dT%H:%M:%S')
+        result = res[res['published_at'] >= date].head(10).reset_index(drop=True)
+        if (jsObj['pages'] - page) <= 1:
+            break
+
+    a = get_array(result[['name', 'published_at']])
+    context = {
+        'GetHHVacancies': a
+    }
+    return render(request, 'lastVac.html', context)
 

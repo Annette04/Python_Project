@@ -1,4 +1,6 @@
-import os.path
+import datetime
+import requests
+import json
 from django.db import models
 import pandas as pd
 
@@ -66,3 +68,4 @@ class AnimatedSkills(models.Model):
 
     def __str__(self):
         return self.title
+
