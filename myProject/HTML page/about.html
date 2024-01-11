@@ -3,12 +3,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Последние вакансии</title>
+  <title>Об авторе</title>
 </head>
 <body>
   <header style="margin-left: 250px; font-size:20px;">
     <center>
-      <h1 style="position: relative; ">Профессия Android-разработчик / Последние вакансии</h1>
+      <h1 style="position: relative; ">Об авторе</h1>
     </center>
   </header>
   <nav>
@@ -19,23 +19,10 @@
       <li><a href="geography.html" style="font-size: 20px">География</a></li>
       <li><a href="skills.html" style="font-size: 20px">Навыки</a></li>
       <li><a href="lastVac.html" style="font-size: 20px">Последние вакансии</a></li>
-      <li style="padding-top: 530px;"><a href="about.html" style="font-size: 20px">Об авторе</a></li>
     </ul>
   </nav>
   <main style="margin-left:250px; font-size:20px;">
-      <div style="padding-bottom: 150px; text-align:center;">
-      <table border="1" style="float: left;">
-        <tbody>
-          {% for row in GetHHVacancies %}
-            <tr>
-              {% for item in row %}
-              <th>{{item}}</th>
-              {% endfor %}
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-      </div>
+
   </main>
   <footer style="margin-left: 250px;">
     <div style="font-size: 20px;">Студент: Ребак Анна Дмитриевна</div>

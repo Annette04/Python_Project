@@ -71,3 +71,5 @@ def lastVac_page(request):
     }
     return render(request, 'lastVac.html', context)
 
+def about_page(request):
+    return render(request, 'about.html')

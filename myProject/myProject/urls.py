@@ -27,7 +27,8 @@ urlpatterns = [
     path('importance.html', importance_page),
     path('geography.html', geography_page),
     path('skills.html', skills_page),
-    path('lastVac.html', lastVac_page)
+    path('lastVac.html', lastVac_page),
+    path('about.html', about_page)
 ]
 
 if settings.DEBUG:
