@@ -23,19 +23,33 @@
     </ul>
   </nav>
   <main style="margin-left:250px; font-size:20px;">
-      <div style="padding-bottom: 150px; text-align:center;">
-      <table border="1" style="float: left;">
-        <tbody>
-          {% for row in GetHHVacancies %}
-            <tr>
-              {% for item in row %}
-              <th>{{item}}</th>
-              {% endfor %}
-            </tr>
-          {% endfor %}
-        </tbody>
+    {% for vac in GetHHVacancies %}
+      <table border="1" width="1000" height="300" align="center">
+        <tr>
+          <td colspan="2" align="center" style="font-weight:bold;"><a href="{{vac.7}}">{{vac.0}}</a></td>
+        </tr>
+        <tr>
+          <td>Оклад:&nbsp;{{vac.1}}</td>
+          <td rowspan="4" width="70%" valign="top">
+            <p align="center">Описание:</p>
+            <p>&nbsp; &nbsp; &nbsp; {{vac.2}}</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Компания:&nbsp; {{vac.3}}</td>
+        </tr>
+        <tr>
+          <td>Название региона:&nbsp; {{vac.4}}</td>
+        </tr>
+        <tr>
+          <td>Навыки:&nbsp; {{vac.5}}</td>
+        </tr>
+        <tr>
+          <td colspan="2" height="30">Дата публикации:&nbsp; {{vac.6}}</td>
+        </tr>
       </table>
-      </div>
+    <p></br></p>
+    {% endfor %}
   </main>
   <footer style="margin-left: 250px;">
     <div style="font-size: 20px;">Студент: Ребак Анна Дмитриевна</div>

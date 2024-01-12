@@ -69,3 +69,11 @@ class AnimatedSkills(models.Model):
     def __str__(self):
         return self.title
 
+class AboutAuthor(models.Model):
+    text = models.TextField(max_length=500)
+    email = models.EmailField()
+    url = models.URLField()
+
+    def __str__(self):
+        return self.text
+

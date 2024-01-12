@@ -22,7 +22,11 @@
     </ul>
   </nav>
   <main style="margin-left:250px; font-size:20px;">
-
+    {% for mod in AboutAuthor %}
+      <p>{{mod.text}}</p>
+      <p>Контакты: <a href="mailto:{{mod.email}}">{{mod.email}}</a></p>
+      <p>Ссылка на репозиторий с проектом: <a href="{{mod.url}}">{{mod.url}}</a></p>
+    {% endfor %}
   </main>
   <footer style="margin-left: 250px;">
     <div style="font-size: 20px;">Студент: Ребак Анна Дмитриевна</div>
