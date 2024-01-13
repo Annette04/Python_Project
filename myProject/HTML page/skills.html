@@ -18,7 +18,7 @@
       <li><a href="importance.html" style="font-size: 20px; ">Востребованность</a></li>
       <li><a href="geography.html" style="font-size: 20px">География</a></li>
       <li><a href="skills.html" style="font-size: 20px">Навыки</a></li>
-      <li><a href="lastVac.html" style="font-size: 20px">Последние вакансии</a></li>
+      <li><a href="spinner.html" style="font-size: 20px">Последние вакансии</a></li>
       <li style="padding-top: 530px;"><a href="about.html" style="font-size: 20px">Об авторе</a></li>
     </ul>
   </nav>
@@ -26,12 +26,12 @@
     {% for mod in VisualDateSkills %}
       <h2 style="text-align: center;">{{ mod.title }}</h2>
       <div style="padding-bottom: 150px; text-align:center;">
-      <table border="1" style="float: left;">
+      <table border="1" width="500" align="left"  style="text-align: center;">
         <tbody>
           {% for row in mod.get_array %}
             <tr>
               {% for item in row %}
-                <th>{{item}}</th>
+                <th width="50%">{{item}}</th>
               {% endfor %}
             </tr>
           {% endfor %}

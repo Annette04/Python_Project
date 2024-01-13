@@ -3,6 +3,8 @@ from django.shortcuts import render
 import pandas as pd
 from .models import *
 import re
+# views.py
+from django.shortcuts import redirect
 
 
 def index_page(request):
@@ -83,11 +85,11 @@ def lastVac_page(request):
     def made_top_10():
         params = {
             'text': 'NAME:Android',
-            'per_page': 100
+            'per_page': 50
         }
         params1 = {
             'text': 'NAME:Андроид',
-            'per_page': 100
+            'per_page': 50
         }
         jsObj = json.loads(getPage(url, params))
         jsObj1 = json.loads(getPage(url, params1))
@@ -126,3 +128,8 @@ def about_page(request):
         'AboutAuthor': model
     }
     return render(request, 'about.html', context)
+
+def spinner_page(request):
+    # response = redirect('lastVac.html')
+    # return response
+    return render(request, 'spinner.html')

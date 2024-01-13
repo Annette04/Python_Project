@@ -3,12 +3,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Об авторе</title>
+  <meta http-equiv="Refresh" content="0; URL=lastVac.html">
+  <title>Последние вакансии</title>
 </head>
 <body>
   <header style="margin-left: 250px; font-size:20px;">
     <center>
-      <h1 style="position: relative; ">Об авторе</h1>
+      <h1 style="position: relative; ">Профессия Android-разработчик / Последние вакансии</h1>
     </center>
   </header>
   <nav>
@@ -18,15 +19,12 @@
       <li><a href="importance.html" style="font-size: 20px; ">Востребованность</a></li>
       <li><a href="geography.html" style="font-size: 20px">География</a></li>
       <li><a href="skills.html" style="font-size: 20px">Навыки</a></li>
-      <li><a href="spinner.html" style="font-size: 20px">Последние вакансии</a></li>
+      <li><a href="lastVac.html" style="font-size: 20px">Последние вакансии</a></li>
+      <li style="padding-top: 530px;"><a href="about.html" style="font-size: 20px">Об авторе</a></li>
     </ul>
   </nav>
-  <main style="margin-left:250px; font-size:20px;">
-    {% for mod in AboutAuthor %}
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{mod.text}}</p>
-      <p>Контакты: <a href="mailto:{{mod.email}}">{{mod.email}}</a></p>
-      <p>Ссылка на репозиторий с проектом: <a href="{{mod.url}}">{{mod.url}}</a></p>
-    {% endfor %}
+  <main style="margin-left: 250px;">
+    <div align="center"><img src="{% static 'loading.gif' %}"></div>
   </main>
   <footer style="margin-left: 250px; position: absolute; left: 0; bottom: 0; height: 50px;">
     <div style="font-size: 20px;">Студент: Ребак Анна Дмитриевна</div>

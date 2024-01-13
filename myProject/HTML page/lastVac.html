@@ -18,21 +18,21 @@
       <li><a href="importance.html" style="font-size: 20px; ">Востребованность</a></li>
       <li><a href="geography.html" style="font-size: 20px">География</a></li>
       <li><a href="skills.html" style="font-size: 20px">Навыки</a></li>
-      <li><a href="lastVac.html" style="font-size: 20px">Последние вакансии</a></li>
+      <li><a href="spinner.html" style="font-size: 20px">Последние вакансии</a></li>
       <li style="padding-top: 530px;"><a href="about.html" style="font-size: 20px">Об авторе</a></li>
     </ul>
   </nav>
   <main style="margin-left:250px; font-size:20px;">
     {% for vac in GetHHVacancies %}
-      <table border="1" width="1000" height="300" align="center">
+      <table border="1" width="1000" height="300" align="center"  style="text-align: center;">
         <tr>
-          <td colspan="2" align="center" style="font-weight:bold;"><a href="{{vac.7}}">{{vac.0}}</a></td>
+          <td colspan="2" align="center" height="35" style="font-weight:bold;"><a href="{{vac.7}}">{{vac.0}}</a></td>
         </tr>
         <tr>
           <td>Оклад:&nbsp;{{vac.1}}</td>
           <td rowspan="4" width="70%" valign="top">
             <p align="center">Описание:</p>
-            <p>&nbsp; &nbsp; &nbsp; {{vac.2}}</p>
+            <p style="text-align: left; margin: 0px 10px 10px 20px;">&nbsp; &nbsp; &nbsp; {{vac.2}}</p>
           </td>
         </tr>
         <tr>
