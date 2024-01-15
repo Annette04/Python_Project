@@ -1,6 +1,3 @@
-import datetime
-import requests
-import json
 from django.db import models
 import pandas as pd
 
